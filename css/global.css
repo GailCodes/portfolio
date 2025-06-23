@@ -1,0 +1,12 @@
+body {
+  height: 100vh;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+}
+
+i {
+  font-size: 60px;
+}
