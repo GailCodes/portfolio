@@ -34,3 +34,25 @@ i {
     gap: 30px;
   }
 }
+
+/************
+  PROJECTS
+************/
+.projects-image {
+  height: 680px;
+  border-radius: 8px;
+}
+
+.carousel-caption {
+  color: #fff !important;
+  place-self: center;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.carousel-caption p {
+  max-width: 60ch;
+}
