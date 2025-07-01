@@ -51,6 +51,21 @@ i {
   height: 300px;
 }
 
+@media screen and (max-width: 990px) {
+  #projects .container .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #projects img {
+    height: unset;
+  }
+}
+
+.card {
+  width: fit-content;
+}
+
 /************
  ANIMATIONS
 ************/
@@ -65,7 +80,7 @@ i {
     fill: #166ca6;
   }
   60% {
-    fill: #0b5687;
+    fill: #1672af;
   }
   80% {
     fill: #0977c0;
