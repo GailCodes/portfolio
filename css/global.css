@@ -15,6 +15,10 @@ body {
   z-index: -1;
 }
 
+.wave path {
+  animation: wave-color-change ease-in-out 10s infinite;
+}
+
 i {
   font-size: 60px;
   margin-right: 10px;
@@ -38,12 +42,16 @@ i {
 /************
   PROJECTS
 ************/
+.project-big p {
+  max-width: 60ch;
+}
+
 .projects-image {
-  height: 680px;
+  max-width: 800px;
   border-radius: 8px;
 }
 
-.carousel-caption {
+/* .carousel-caption {
   color: #fff !important;
   place-self: center;
   width: fit-content;
@@ -55,4 +63,28 @@ i {
 
 .carousel-caption p {
   max-width: 60ch;
+} */
+
+/************
+ ANIMATIONS
+************/
+@keyframes wave-color-change {
+  0% {
+    fill: #0099ff;
+  }
+  20% {
+    fill: #0875bf;
+  }
+  40% {
+    fill: #166ca6;
+  }
+  60% {
+    fill: #0b5687;
+  }
+  80% {
+    fill: #0977c0;
+  }
+  100% {
+    fill: #0099ff;
+  }
 }
