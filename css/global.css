@@ -19,9 +19,14 @@ body {
   animation: wave-color-change ease-in-out 10s infinite;
 }
 
+/* Dev icons */
 i {
   font-size: 60px;
   margin-right: 10px;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 /************
@@ -42,28 +47,9 @@ i {
 /************
   PROJECTS
 ************/
-.project-big p {
-  max-width: 60ch;
+#projects img {
+  height: 300px;
 }
-
-.projects-image {
-  max-width: 800px;
-  border-radius: 8px;
-}
-
-/* .carousel-caption {
-  color: #fff !important;
-  place-self: center;
-  width: fit-content;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  padding: 0 10px;
-  margin-bottom: 20px;
-}
-
-.carousel-caption p {
-  max-width: 60ch;
-} */
 
 /************
  ANIMATIONS

@@ -51,29 +51,108 @@
 
     <div class="container-lg mt-4">
       <!-- INTRODUCTION -->
-      <h1>My projects</h1>
+      <h1>My Projects</h1>
       <p class="lh-lg">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Exercitationem, sit vero doloremque officia totam obcaecati consectetur
-        modi maxime provident. Asperiores voluptas nobis consectetur, harum sunt
-        dolore magnam magni veniam omnis suscipit est architecto et eligendi
-        illo corrupti nemo maiores, explicabo libero ipsam recusandae. Sapiente
-        nemo, libero fugit voluptate at quisquam?
+        Explore my portfolio of frontend development projects below. Each one
+        represents a different aspect of my skillset, from responsive layouts to
+        dynamic web applications. You'll find examples using various
+        technologies like React, CSS animations, and API integrations. For those
+        interested in the code behind these projects, most are available on my
+        <a href="github.com/GailCodes" target="_blank">GitHub</a>.
       </p>
 
       <hr />
 
       <!-- Projects section -->
-      <section>
-        <div class="project-big">
-          <a href="https://www.hyperstack.cloud/" target="_blank">
-            <h3>Hyperstack</h3>
-          </a>
-          <p>
-            From 2022 to 2024 I worked on the front-end (and some of the
-            back-end) of a new cloud computing software.
-          </p>
-          <img src="assets/hyperstack-ui.png" class="projects-image" alt="" />
+      <section id="projects">
+        <div class="container">
+          <div class="row row-cols-2">
+            <!-- PROJECT: Hyperstack -->
+            <div class="col">
+              <div class="card">
+                <img
+                  src="assets/hyperstack-ui.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="https://www.hyperstack.cloud/" target="_blank">
+                      Hyperstack
+                    </a>
+                  </h4>
+                  <p class="card-text lh-lg">
+                    From 2022 to 2024 I worked on the front-end (and some of the
+                    back-end) of a new cloud computing software. It was a great
+                    experience and I learnt a lot of new things. The project was
+                    made with
+
+                    <span class="bold">Next.js</span>
+                    and Tailwind CSS on the front-end, with Python (flask) on
+                    the backend.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT: Next.js blog -->
+            <div class="col">
+              <div class="card">
+                <div
+                  id="carouselExampleSlidesOnly"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner card-img-top">
+                    <div class="carousel-item active">
+                      <img
+                        src="assets/react-blog-home-dark.png"
+                        class="d-block w-100"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="assets/react-blog-home-light.png"
+                        class="d-block w-100"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a
+                      href="https://react-blog-amber-beta.vercel.app/"
+                      target="_blank"
+                    >
+                      Next.js Blog
+                    </a>
+                  </h4>
+                  <p class="card-text lh-lg">
+                    A blog site I made to practice
+                    <span class="bold">Next.js</span>! It has syntax
+                    highlighting too for articles that have code examples. You
+                    can view the source code on
+                    <a
+                      href="https://github.com/GailCodes/next-blog/tree/main"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row row-cols-4">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+          </div>
         </div>
       </section>
     </div>
