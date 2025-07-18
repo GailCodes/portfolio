@@ -15,6 +15,21 @@ body {
   z-index: -1;
 }
 
+.container {
+  padding-right: 140px !important;
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
 .wave path {
   animation: wave-color-change ease-in-out 10s infinite;
 }
@@ -61,10 +76,6 @@ i {
     height: unset;
   }
 }
-
-/* .card {
-  width: fit-content;
-} */
 
 /************
  ANIMATIONS
