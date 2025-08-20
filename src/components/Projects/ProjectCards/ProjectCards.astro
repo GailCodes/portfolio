@@ -1,16 +1,25 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import type { ProjectData } from "../../../types/ProjectData";
+
+interface Props {
+  data: ProjectData[];
+}
+
+const { data } = Astro.props;
 ---
 
 <div class="project-cards">
-  <ProjectCard
-    imageUrl="/src/assets/images/project-images/dummy-card-image.jpg"
-    title="Google"
-    url="www.google.com"
-  />
-  <ProjectCard />
-  <ProjectCard />
-  <ProjectCard />
+  {
+    data.map((project: ProjectData) => (
+      <ProjectCard
+        title={project.title}
+        description={project.description}
+        url={project.url}
+        imageUrl={project.imageUrl}
+      />
+    ))
+  }
 </div>
 
 <style>

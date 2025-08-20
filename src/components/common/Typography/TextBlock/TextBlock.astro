@@ -1,0 +1,17 @@
+---
+interface Props {
+  maxCharacterWidth?: number;
+}
+
+const { maxCharacterWidth } = Astro.props;
+---
+
+<div class="text-block" style={`max-width: ${maxCharacterWidth}ch`}>
+  <slot />
+</div>
+
+<style>
+  .text-block {
+    margin-bottom: 10px;
+  }
+</style>
