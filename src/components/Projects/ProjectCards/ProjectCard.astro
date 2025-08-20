@@ -4,47 +4,94 @@ import BackgroundFilter from "../../common/BackgroundFilter/BackgroundFilter.ast
 const { title, url, imageUrl } = Astro.props;
 ---
 
-<div class="project-card" style={{ backgroundImage: `url(${imageUrl})` }}>
-  <div class="filter-toggle">
-    <BackgroundFilter />
-  </div>
+<a href={url} target="_blank">
+  <div class="project-card" style={{ backgroundImage: `url(${imageUrl})` }}>
+    <div class="filter-toggle">
+      <BackgroundFilter />
+    </div>
 
-  <a href={url} target="_blank">{title}</a>
-</div>
+    <div class="title-container">
+      <h5 class="project-title">{title}</h5>
+    </div>
+  </div>
+</a>
 
 <style>
   /* Card  */
   .project-card {
     position: relative;
-    border: 1px solid #222;
-    height: 200px;
+    border: 0.5px solid #000;
+    height: 250px;
     background-size: cover;
+    background-blend-mode: darken;
+
+    filter: grayscale(100%);
+    transition: all 200ms ease-in-out;
+
     border-radius: 4px;
+    cursor: pointer;
     z-index: 1;
   }
 
-  /* Project Link */
-  .project-card:hover a {
+  .project-card:hover {
+    filter: grayscale(0%);
+    transition: all 200ms ease-in-out;
+  }
+
+  /* Project Title */
+  .project-card:hover .project-title {
+    opacity: 1;
+    animation: fadeIn 200ms ease-in-out;
+  }
+
+  .title-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
 
-  a {
-    display: none;
-    position: relative;
+  .project-title {
+    opacity: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    text-decoration: none;
     color: #fff;
-    height: 100%;
     z-index: 1;
+    animation: fadeOut 200ms ease-in-out;
   }
 
   /* Filter toggle */
   .project-card:hover .filter-toggle {
-    display: block;
+    opacity: 1;
+    animation: fadeIn 200ms ease-in-out;
   }
 
   .filter-toggle {
-    display: none;
+    opacity: 0;
+    animation: fadeOut 200ms ease-in-out;
+
     z-index: 1;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 </style>
