@@ -1,11 +1,50 @@
-<div class="project-card"></div>
+---
+import BackgroundFilter from "../../common/BackgroundFilter/BackgroundFilter.astro";
+
+const { title, url, imageUrl } = Astro.props;
+---
+
+<div class="project-card" style={{ backgroundImage: `url(${imageUrl})` }}>
+  <div class="filter-toggle">
+    <BackgroundFilter />
+  </div>
+
+  <a href={url} target="_blank">{title}</a>
+</div>
 
 <style>
+  /* Card  */
   .project-card {
+    position: relative;
     border: 1px solid #222;
     height: 200px;
-    /* padding: 20px; */
-    /* margin: 10px; */
+    background-size: cover;
     border-radius: 4px;
+    z-index: 1;
+  }
+
+  /* Project Link */
+  .project-card:hover a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    display: none;
+    position: relative;
+    color: #fff;
+    height: 100%;
+    z-index: 1;
+  }
+
+  /* Filter toggle */
+  .project-card:hover .filter-toggle {
+    display: block;
+  }
+
+  .filter-toggle {
+    display: none;
+    z-index: 1;
   }
 </style>
