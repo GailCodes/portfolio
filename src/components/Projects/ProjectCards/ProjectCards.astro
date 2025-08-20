@@ -1,0 +1,18 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<div class="project-cards">
+  <ProjectCard />
+  <ProjectCard />
+  <ProjectCard />
+  <ProjectCard />
+</div>
+
+<style>
+  .project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+</style>

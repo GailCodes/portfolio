@@ -1,0 +1,67 @@
+---
+import Footer from "../components/common/Footer/Footer.astro";
+import H1 from "../components/common/Typography/Headings/H1.astro";
+import Paragraph from "../components/common/Typography/Paragraph/Paragraph.astro";
+import HomeLanding from "../components/HomeLanding/HomeLanding.astro";
+import ProjectCards from "../components/Projects/ProjectCards/ProjectCards.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- Home Section -->
+  <HomeLanding />
+
+  <div class="container">
+    <!-- Projects Section -->
+    <section id="projects">
+      <H1>Projects</H1>
+      <ProjectCards />
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <H1>About</H1>
+
+      <Paragraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        molestiae adipisci voluptatibus pariatur rem quam. Optio nam cum velit
+        fugiat rerum expedita similique doloremque sunt repellendus, voluptatum
+        hic non minima veritatis suscipit odit nulla in molestiae nostrum
+        perferendis? Doloribus praesentium voluptates alias numquam odit maxime?
+        Doloribus beatae suscipit qui labore. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Inventore illum perspiciatis quasi
+        aspernatur aut. Dolorum voluptatibus qui minima consequatur ipsam sunt
+        nesciunt nostrum ea officia sed, consectetur sequi, commodi aliquid
+        deserunt nobis impedit ab libero recusandae accusantium facere et
+        corporis sint. Culpa voluptatem totam aspernatur, asperiores nisi
+        numquam earum nam autem eos harum nesciunt consequatur quasi aut cumque
+        adipisci sint eum doloribus quod aliquam ex molestiae ipsam ducimus
+        consectetur. Nesciunt necessitatibus cum voluptatem ipsa, voluptas
+        blanditiis. Impedit quia ex inventore.
+      </Paragraph>
+    </section>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  h1 {
+    font-weight: 300;
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+  }
+</style>
