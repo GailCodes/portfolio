@@ -1,0 +1,153 @@
+---
+import BackgroundFilter from "../../common/BackgroundFilter/BackgroundFilter.astro";
+import Paragraph from "../../common/Typography/Paragraph.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+  imageUrl: string;
+}
+
+const { title, description, url, imageUrl } = Astro.props;
+---
+
+<a href={url} target="_blank" class="link">
+  <div class="card" style={{ backgroundImage: `url(${imageUrl})` }}>
+    <div class="filter-toggle">
+      <BackgroundFilter opacity={0.8} />
+    </div>
+
+    <div class="info-container">
+      <h5>{title}</h5>
+      <Paragraph>{description}</Paragraph>
+    </div>
+  </div>
+</a>
+
+<style>
+  /* Card  */
+  .link {
+    color: var(--secondary-color);
+  }
+
+  .card {
+    position: relative;
+
+    border: 1px solid var(--accent-color);
+
+    height: 250px;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    filter: grayscale(100%);
+    transition: all 200ms ease-in-out;
+
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .card:hover {
+    filter: grayscale(0%);
+    transition: all 200ms ease-in-out;
+  }
+
+  /*
+  # Project Title #
+  The title and description is initially hidden and fades in on hover.
+  */
+  .info-container {
+    opacity: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 10px;
+    animation: fadeOut 200ms ease-in-out;
+  }
+
+  h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+
+    align-self: flex-start;
+
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  .card:hover .info-container {
+    opacity: 1;
+    animation: fadeIn 200ms ease-in-out;
+  }
+
+  /* 
+  # Filter toggle #
+  This toggles the visibility of the BackgroundFilter component on hover.
+  */
+  .filter-toggle {
+    opacity: 0;
+    animation: fadeOut 200ms ease-in-out;
+    border-radius: 4px;
+
+    z-index: 1;
+  }
+  .card:hover .filter-toggle {
+    opacity: 1;
+    animation: fadeIn 200ms ease-in-out;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .card {
+      filter: unset;
+      transition: unset;
+    }
+
+    .card:hover {
+      filter: unset;
+      transition: unset;
+    }
+
+    .info-container {
+      opacity: 1;
+      animation: unset;
+      transition: unset;
+    }
+
+    .filter-toggle {
+      opacity: 1;
+      animation: unset;
+    }
+    .card:hover .filter-toggle {
+      animation: unset;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+</style>

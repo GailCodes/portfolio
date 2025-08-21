@@ -1,0 +1,86 @@
+---
+import Container from "../components/common/Container/Container.astro";
+import Footer from "../components/common/Footer/Footer.astro";
+import H1 from "../components/common/Typography/H1.astro";
+import Paragraph from "../components/common/Typography/Paragraph.astro";
+import SpanBold from "../components/common/Typography/Spans/SpanBold/SpanBold.astro";
+import TextBlock from "../components/common/Typography/TextBlock/TextBlock.astro";
+import HomeLanding from "../components/HomeLanding/HomeLanding.astro";
+import ProjectCards from "../components/Projects/ProjectCards/ProjectCards.astro";
+import SkillWall from "../components/SkillWall/SkillWall.astro";
+import { projects } from "../data/projects.ts";
+import {
+  backendSkills,
+  frontendSkills,
+  toolsSkills,
+} from "../data/skill-icons.ts";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- Home Section -->
+  <HomeLanding />
+
+  <Container>
+    <!-- Projects Section -->
+    <section id="projects">
+      <H1>Projects</H1>
+
+      <TextBlock maxCharacterWidth={110}>
+        <Paragraph>
+          Here are some of the projects I've worked on, showcasing my skills in
+          frontend and backend development. Check out my <a
+            href="https://github.com/GailCodes"
+            target="_blank">GitHub</a
+          > for the source code.</Paragraph
+        >
+      </TextBlock>
+      <ProjectCards data={projects} />
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <H1>About</H1>
+
+      <TextBlock maxCharacterWidth={120}>
+        <Paragraph>
+          I'm a <SpanBold>frontend developer</SpanBold> who builds fast, responsive,
+          and visually appealing web applications with <SpanBold
+            >React and Next.js.</SpanBold
+          >
+        </Paragraph>
+
+        <Paragraph>
+          I'm passionate about transforming complex problems into intuitive,
+          performant, and accessible user experiences.
+        </Paragraph>
+      </TextBlock>
+
+      <TextBlock maxCharacterWidth={120} bottomMargin="40px">
+        <Paragraph>
+          My <SpanBold>foundation in both frontend and backend</SpanBold> technologies
+          allows me to effectively bridge the gap between design and implementation,
+          working collaboratively to bring ideas to life.
+        </Paragraph>
+      </TextBlock>
+
+      <SkillWall
+        title="Frontend Skills"
+        icons={frontendSkills}
+        color="#191919"
+        showTopBorder
+      />
+
+      <SkillWall title="Backend Skills" icons={backendSkills} color="#252525" />
+
+      <SkillWall
+        title="Tools I use"
+        icons={toolsSkills}
+        color="#303030"
+        showBottomBorder
+      />
+    </section>
+  </Container>
+
+  <Footer />
+</Layout>
