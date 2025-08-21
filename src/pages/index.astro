@@ -25,6 +25,16 @@ import Layout from "../layouts/Layout.astro";
     <!-- Projects Section -->
     <section id="projects">
       <H1>Projects</H1>
+
+      <TextBlock maxCharacterWidth={110}>
+        <Paragraph>
+          Here are some of the projects I've worked on, showcasing my skills in
+          frontend and backend development. Check out my <a
+            href="https://github.com/GailCodes"
+            target="_blank">GitHub</a
+          > for the source code.</Paragraph
+        >
+      </TextBlock>
       <ProjectCards data={projects} />
     </section>
 
@@ -32,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
     <section id="about">
       <H1>About</H1>
 
-      <TextBlock maxCharacterWidth={100}>
+      <TextBlock maxCharacterWidth={120}>
         <Paragraph>
           I'm a <SpanBold>frontend developer</SpanBold> who builds fast, responsive,
           and visually appealing web applications with <SpanBold
@@ -46,7 +56,7 @@ import Layout from "../layouts/Layout.astro";
         </Paragraph>
       </TextBlock>
 
-      <TextBlock maxCharacterWidth={100} bottomMargin="40px">
+      <TextBlock maxCharacterWidth={120} bottomMargin="40px">
         <Paragraph>
           My <SpanBold>foundation in both frontend and backend</SpanBold> technologies
           allows me to effectively bridge the gap between design and implementation,
