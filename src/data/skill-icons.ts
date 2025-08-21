@@ -18,5 +18,6 @@ export const toolsSkills = [
   "docker-plain-wordmark",
   "github-original-wordmark",
   "git-plain-wordmark",
+  "vercel-original-wordmark",
   "npm-original-wordmark",
 ];
