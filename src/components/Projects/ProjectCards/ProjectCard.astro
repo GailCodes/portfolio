@@ -1,6 +1,6 @@
 ---
 import BackgroundFilter from "../../common/BackgroundFilter/BackgroundFilter.astro";
-import Paragraph from "../../common/Typography/Paragraph/Paragraph.astro";
+import Paragraph from "../../common/Typography/Paragraph.astro";
 
 interface Props {
   title: string;
@@ -34,7 +34,7 @@ const { title, description, url, imageUrl } = Astro.props;
   .card {
     position: relative;
 
-    border: 3px solid #000;
+    border: 2px solid var(--primary-color);
 
     height: 250px;
     background-size: cover;
@@ -67,7 +67,7 @@ const { title, description, url, imageUrl } = Astro.props;
     flex-direction: column;
 
     height: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 10px;
     animation: fadeOut 200ms ease-in-out;
   }
@@ -76,11 +76,11 @@ const { title, description, url, imageUrl } = Astro.props;
     font-family: "Open Sans", sans-serif;
     font-size: 2rem;
     font-weight: 500;
+    color: var(--primary-color);
 
     align-self: flex-start;
 
     text-decoration: none;
-    color: var(--secondary-color);
     z-index: 1;
   }
 

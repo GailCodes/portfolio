@@ -1,17 +1,15 @@
 ---
 interface Props {
   maxCharacterWidth?: number;
+  bottomMargin?: string;
 }
 
-const { maxCharacterWidth } = Astro.props;
+const { maxCharacterWidth, bottomMargin } = Astro.props;
 ---
 
-<div class="text-block" style={`max-width: ${maxCharacterWidth}ch`}>
+<div
+  class="text-block"
+  style={`max-width: ${maxCharacterWidth}ch; margin-bottom: ${bottomMargin || "10px"}`}
+>
   <slot />
 </div>
-
-<style>
-  .text-block {
-    margin-bottom: 10px;
-  }
-</style>
