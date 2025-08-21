@@ -9,7 +9,7 @@ export const frontendSkills = [
 
 export const backendSkills = [
   "nodejs-plain-wordmark",
-  "azuresqldatabase-plain",
+  "php-plain",
   "mysql-plain-wordmark",
 ];
 
