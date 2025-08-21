@@ -1,0 +1,22 @@
+export const frontendSkills = [
+  "html5-plain-wordmark",
+  "css3-plain-wordmark",
+  "javascript-plain",
+  "typescript-plain",
+  "react-original-wordmark",
+  "nextjs-original-wordmark",
+];
+
+export const backendSkills = [
+  "nodejs-plain-wordmark",
+  "azuresqldatabase-plain",
+  "mysql-plain-wordmark",
+];
+
+export const toolsSkills = [
+  "jira-plain-wordmark",
+  "docker-plain-wordmark",
+  "github-original-wordmark",
+  "git-plain-wordmark",
+  "npm-original-wordmark",
+];

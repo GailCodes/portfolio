@@ -33,7 +33,10 @@ const { title, description, url, imageUrl } = Astro.props;
 
   .card {
     position: relative;
-    border: 0.5px solid var(--primary-color);
+
+    border: 1px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
     height: 250px;
     background-size: cover;
     background-blend-mode: darken;
@@ -93,6 +96,7 @@ const { title, description, url, imageUrl } = Astro.props;
   .filter-toggle {
     opacity: 0;
     animation: fadeOut 200ms ease-in-out;
+    border-radius: 4px;
 
     z-index: 1;
   }

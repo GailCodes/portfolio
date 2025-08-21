@@ -6,7 +6,13 @@ import SpanBold from "../components/common/Typography/Spans/SpanBold/SpanBold.as
 import TextBlock from "../components/common/Typography/TextBlock/TextBlock.astro";
 import HomeLanding from "../components/HomeLanding/HomeLanding.astro";
 import ProjectCards from "../components/Projects/ProjectCards/ProjectCards.astro";
-import { projects } from "../data/projects.js";
+import SkillWall from "../components/SkillWall/SkillWall.astro";
+import { projects } from "../data/projects.ts";
+import {
+  frontendSkills,
+  backendSkills,
+  toolsSkills,
+} from "../data/skill-icons.ts";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -47,22 +53,19 @@ import Layout from "../layouts/Layout.astro";
         </Paragraph>
       </TextBlock>
 
-      <TextBlock maxCharacterWidth={100}>
-        <Paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
-          consequuntur dolor soluta, ullam asperiores accusamus quo dolorum
-          vero. Blanditiis, quibusdam? Iste cupiditate molestiae ea impedit.
-          Voluptatem debitis, eaque, perferendis deserunt aut maxime magni optio
-          alias commodi ipsam odio laudantium sit culpa, libero pariatur unde
-          quibusdam! Quo unde blanditiis totam obcaecati incidunt modi corrupti
-          excepturi, quod vero delectus error alias placeat dolorum, facere
-          nulla, repellendus deleniti. Inventore explicabo perferendis sint
-          repudiandae quod, laudantium hic molestiae. Dolore nam laudantium
-          nostrum molestiae error quam debitis eum aliquam esse quos
-          necessitatibus amet earum libero temporibus nobis soluta, ducimus
-          fugit, similique iste ea eius! Ipsam.
-        </Paragraph>
-      </TextBlock>
+      <SkillWall
+        title="Frontend Skills"
+        icons={frontendSkills}
+        color="#000"
+        showTopBorder
+      />
+      <SkillWall title="Backend Skills" icons={backendSkills} color="#191919" />
+      <SkillWall
+        title="Tools I use"
+        icons={toolsSkills}
+        color="#252525"
+        showBottomBorder
+      />
     </section>
   </div>
 
