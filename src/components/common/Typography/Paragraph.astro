@@ -1,4 +1,10 @@
-<p>
+---
+interface Props {
+  fontSize?: string;
+}
+---
+
+<p style={`font-size: ${Astro.props.fontSize || "1.1rem"}`}>
   <slot />
 </p>
 
@@ -7,7 +13,6 @@
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: 1.1rem;
     color: var(--primary-color);
   }
 </style>
