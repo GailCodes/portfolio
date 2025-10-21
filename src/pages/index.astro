@@ -26,10 +26,10 @@ import Layout from "../layouts/Layout.astro";
     <section id="projects">
       <H1>Projects</H1>
 
-      <TextBlock maxCharacterWidth={110}>
+      <TextBlock>
         <Paragraph>
           Here are some of the projects I've worked on, showcasing my skills in
-          frontend development. Check out my <a
+          Front-End development. Check out my <a
             href="https://github.com/GailCodes"
             target="_blank">GitHub</a
           > for the source code.</Paragraph
@@ -42,36 +42,22 @@ import Layout from "../layouts/Layout.astro";
     <section id="about">
       <H1>About</H1>
 
-      <TextBlock maxCharacterWidth={120}>
+      <TextBlock>
         <Paragraph>
-          I'm a <SpanBold>frontend developer</SpanBold> who builds fast, responsive,
-          and visually appealing web applications with <SpanBold
+          I'm a <SpanBold>Front-End developer</SpanBold> who builds fast, responsive,
+          and visually appealing websites and web apps with <SpanBold
             >React and Next.js.</SpanBold
           >
         </Paragraph>
-      </TextBlock>
 
-      <TextBlock maxCharacterWidth={120} bottomMargin="40px">
         <Paragraph>
-          My <SpanBold>foundation in both frontend and backend</SpanBold> development allows me to better bridge the gap between the design and implementation of client and server-side features.
+          I have a <SpanBold>foundation in both Front-End and Back-End</SpanBold
+          >
+          development, which allows me to better bridge the gap between the two sides.
         </Paragraph>
       </TextBlock>
 
-      <SkillWall
-        title="Frontend Skills"
-        icons={frontendSkills}
-        color="#191919"
-        showTopBorder
-      />
-
-      <SkillWall title="Backend Skills" icons={backendSkills} color="#252525" />
-
-      <SkillWall
-        title="Tools I use"
-        icons={toolsSkills}
-        color="#303030"
-        showBottomBorder
-      />
+      <SkillWall />
     </section>
   </Container>
 

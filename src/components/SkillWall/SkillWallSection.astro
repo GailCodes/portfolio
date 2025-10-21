@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  icons: string[];
+  color: string;
+  showTopBorder?: boolean;
+  showBottomBorder?: boolean;
+}
+
+const { title, icons, color, showTopBorder, showBottomBorder } = Astro.props;
+---
+
+<div
+  class="skill-wall-section"
+  id="skills-frontend"
+  style={`
+    background-color: ${color}; 
+  `}
+>
+  <h5>{title}</h5>
+
+  <div class="grid">
+    {icons.map((icon: string) => <i class={`devicon-${icon}`} />)}
+  </div>
+</div>
+
+<style>
+  .skill-wall-section {
+    padding: 40px 20px;
+  }
+
+  .skill-wall-section .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-wall-section h5 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--primary-color);
+
+    padding-bottom: 20px;
+  }
+
+  i {
+    font-size: 4rem;
+  }
+</style>
