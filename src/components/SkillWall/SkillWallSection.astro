@@ -20,7 +20,13 @@ const { title, icons, color, showTopBorder, showBottomBorder } = Astro.props;
   <h5>{title}</h5>
 
   <div class="grid">
-    {icons.map((icon: string) => <i class={`devicon-${icon}`} />)}
+    {
+      icons.map((icon: string) => (
+        <i
+          class={`devicon-${icon} ${!icon.includes("colored") && "devicon-inverted"}`}
+        />
+      ))
+    }
   </div>
 </div>
 
@@ -46,5 +52,10 @@ const { title, icons, color, showTopBorder, showBottomBorder } = Astro.props;
 
   i {
     font-size: 4rem;
+    /* filter: invert(1); */
+  }
+
+  .devicon-inverted {
+    filter: invert(1);
   }
 </style>
