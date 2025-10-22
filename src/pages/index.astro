@@ -9,11 +9,6 @@ import HomeLanding from "../components/HomeLanding/HomeLanding.astro";
 import ProjectCards from "../components/Projects/ProjectCards/ProjectCards.astro";
 import SkillWall from "../components/SkillWall/SkillWall.astro";
 import { projects } from "../data/projects.ts";
-import {
-  backendSkills,
-  frontendSkills,
-  toolsSkills,
-} from "../data/skill-icons.ts";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -22,22 +17,6 @@ import Layout from "../layouts/Layout.astro";
   <HomeLanding />
 
   <Container>
-    <!-- Projects Section -->
-    <section id="projects">
-      <H1>Projects</H1>
-
-      <TextBlock>
-        <Paragraph>
-          Here are some of the projects I've worked on, showcasing my skills in
-          Front-End development. Check out my <a
-            href="https://github.com/GailCodes"
-            target="_blank">GitHub</a
-          > for the source code.</Paragraph
-        >
-      </TextBlock>
-      <ProjectCards data={projects} />
-    </section>
-
     <!-- About Section -->
     <section id="about">
       <H1>About</H1>
@@ -58,6 +37,22 @@ import Layout from "../layouts/Layout.astro";
       </TextBlock>
 
       <SkillWall />
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <H1>Projects</H1>
+
+      <TextBlock>
+        <Paragraph>
+          Here are some of the projects I've worked on, showcasing my skills in
+          Front-End development. Check out my <a
+            href="https://github.com/GailCodes"
+            target="_blank">GitHub</a
+          > for the source code.</Paragraph
+        >
+      </TextBlock>
+      <ProjectCards data={projects} />
     </section>
   </Container>
 
