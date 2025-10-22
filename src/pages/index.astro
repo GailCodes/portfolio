@@ -1,10 +1,12 @@
 ---
+import Block from "../components/common/Block/Block.astro";
 import Container from "../components/common/Container/Container.astro";
 import Footer from "../components/common/Footer/Footer.astro";
+import Icon from "../components/common/Icon/Icon.astro";
 import H1 from "../components/common/Typography/H1.astro";
 import Paragraph from "../components/common/Typography/Paragraph.astro";
 import SpanBold from "../components/common/Typography/Spans/SpanBold/SpanBold.astro";
-import TextBlock from "../components/common/Typography/TextBlock/TextBlock.astro";
+import ContactCard from "../components/Contacts/ContactCard.astro";
 import HomeLanding from "../components/HomeLanding/HomeLanding.astro";
 import ProjectCards from "../components/Projects/ProjectCards/ProjectCards.astro";
 import SkillWall from "../components/SkillWall/SkillWall.astro";
@@ -21,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
     <section id="about">
       <H1>About</H1>
 
-      <TextBlock>
+      <Block>
         <Paragraph>
           I'm a <SpanBold>Front-End developer</SpanBold> who builds fast, responsive,
           and visually appealing websites and web apps with <SpanBold
@@ -34,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
           >
           development, which allows me to better bridge the gap between the two sides.
         </Paragraph>
-      </TextBlock>
+      </Block>
 
       <SkillWall />
     </section>
@@ -43,16 +45,37 @@ import Layout from "../layouts/Layout.astro";
     <section id="projects">
       <H1>Projects</H1>
 
-      <TextBlock>
+      <Block>
         <Paragraph>
-          Here are some of the projects I've worked on, showcasing my skills in
-          Front-End development. Check out my <a
+          Here are some of the projects I've worked on, showcasing my skills as
+          a developer. Check out my <a
             href="https://github.com/GailCodes"
             target="_blank">GitHub</a
           > for the source code.</Paragraph
         >
-      </TextBlock>
+      </Block>
       <ProjectCards data={projects} />
+    </section>
+
+    <section id="contacts">
+      <H1>Contacts and Socials</H1>
+
+      <Block>
+        <Paragraph>I'm currently open to new opportunities.</Paragraph>
+        <Paragraph>Feel free to reach out to me at any time.</Paragraph>
+
+        <ContactCard
+          icon="linkedin-plain colored"
+          href="https://www.linkedin.com/in/gail-bayley/"
+          contactTitle="LinkedIn"
+        />
+
+        <ContactCard
+          icon="github-plain"
+          href="https://github.com/GailCodes"
+          contactTitle="GitHub"
+        />
+      </Block>
     </section>
   </Container>
 

@@ -1,0 +1,20 @@
+---
+interface Props {
+  icon: string;
+  size?: string;
+}
+
+const { icon, size } = Astro.props;
+---
+
+<i
+  class={`devicon-${icon} ${!icon.includes("colored") && "devicon-inverted"}`}
+  style={`
+  font-size: ${size || "4rem"};
+`}></i>
+
+<style>
+  .devicon-inverted {
+    filter: invert(1);
+  }
+</style>

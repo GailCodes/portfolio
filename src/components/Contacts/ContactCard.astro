@@ -1,0 +1,31 @@
+---
+import Icon from "../common/Icon/Icon.astro";
+
+const { icon, href, contactTitle } = Astro.props;
+---
+
+<div class="contact-card">
+  <Icon icon={icon} size="2.5rem" />
+  <a href={href} target="_blank" class="animate__animated animate__flipInX"
+    >{contactTitle}</a
+  >
+</div>
+
+<style>
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+  }
+
+  a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+
+  a:hover {
+    color: #6f6fe6;
+  }
+</style>

@@ -1,13 +1,13 @@
 ---
+import Icon from "../common/Icon/Icon.astro";
+
 interface Props {
   title: string;
   icons: string[];
   color: string;
-  showTopBorder?: boolean;
-  showBottomBorder?: boolean;
 }
 
-const { title, icons, color, showTopBorder, showBottomBorder } = Astro.props;
+const { title, icons, color } = Astro.props;
 ---
 
 <div
@@ -20,13 +20,7 @@ const { title, icons, color, showTopBorder, showBottomBorder } = Astro.props;
   <h5>{title}</h5>
 
   <div class="grid">
-    {
-      icons.map((icon: string) => (
-        <i
-          class={`devicon-${icon} ${!icon.includes("colored") && "devicon-inverted"}`}
-        />
-      ))
-    }
+    {icons.map((icon: string) => <Icon icon={icon} />)}
   </div>
 </div>
 
@@ -48,14 +42,5 @@ const { title, icons, color, showTopBorder, showBottomBorder } = Astro.props;
     color: var(--primary-color);
 
     padding-bottom: 20px;
-  }
-
-  i {
-    font-size: 4rem;
-    /* filter: invert(1); */
-  }
-
-  .devicon-inverted {
-    filter: invert(1);
   }
 </style>
