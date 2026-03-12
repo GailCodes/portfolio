@@ -8,6 +8,13 @@ export const projects: ProjectData[] = [
     url: "https://www.hyperstack.cloud/",
   },
   {
+    title: "The Pokédex Game",
+    description:
+      "A fun and interactive web-based game built with Next.js and the PokéAPI.",
+    imageUrl: "/images/project-images/pokedex-game.png",
+    url: "https://pokedex-game-gilt.vercel.app/",
+  },
+  {
     title: "Next.js Blog",
     description:
       "A high-performance, statically-generated blog built with Next.js.",
